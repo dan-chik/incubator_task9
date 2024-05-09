@@ -1,0 +1,14 @@
+<h2>Recipe Details</h2>
+
+<div *ngIf="product" class="product-details">
+  <div class="product-image">
+    <img [src]="product.image" alt="{{ product.name }} Image">
+  </div>
+
+  <div class="product-description">
+    <h3>{{ product.name }}</h3>
+    <h4>{{ product.time }} minutes</h4>
+    <p>{{ product.description }}</p>
+  </div>
+
+</div>

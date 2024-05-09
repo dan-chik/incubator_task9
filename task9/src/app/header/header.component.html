@@ -1,0 +1,25 @@
+<header>
+
+  <div routerLink="/" class="home">
+    <h3>CHEF-IN</h3>
+  </div>
+
+
+  <div class="search-container">
+    <input type="text" [(ngModel)]="searchText" placeholder="Search..." (input)="performSearch()">
+    <ul>
+      <li *ngFor="let product of products | filter: searchText">{{ product }}</li>
+    </ul>
+
+<!--    <input type="text" placeholder="Search..." [(ngModel)]="searchTerm" class="search-bar">-->
+<!--    <button class="search-button" (click)="onSearch()">-->
+<!--      <img src="assets/icons/search-alt-2-svgrepo-com.svg" alt="Search Icon" width="24px" height="24px">-->
+<!--    </button>-->
+  </div>
+
+
+  <a href="#" class="cart-icon">
+    <img src="assets/icons/like-svgrepo-com.svg" alt="Like Icon" width="24px" height="24px">
+  </a>
+
+</header>
